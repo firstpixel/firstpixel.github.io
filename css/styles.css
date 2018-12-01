@@ -1,0 +1,28 @@
+.rondSize {
+    font-weight: bold;
+    font-size: 140px;
+}
+
+.randInitSize {
+    font-size: 20px;
+}
+
+.fixedHeight {
+    height: 200px;
+}
+
+.logoSize {
+    height:200px;
+}
+
+.gray {
+    color: #666;
+}
+
+.item {
+    background-color: rgb(255, 252, 203);
+}
+
+.tableHeader {
+    background-color: gold;
+}

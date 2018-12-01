@@ -18,14 +18,20 @@
             <img class="logoSize" src="images/logo.png" alt="Kings Club de Santana">
             <h1 class="gray">Sorteio <span id="counter"></span></h1>
             <form id="initForm">
-              <div class="row fixedHeight" id="setupContainer">
+              <div class="row fixedSmall" id="setupContainer">
                 <div class="form-group col">
                   <label for="initNumber">ENTRE</label>
                   <input type="number" class="form-control" id="initNumber" placeholder="Número inicial">
                 </div>
                 <div class="form-group col">
-                  <label for="lastNumber">E</label>
-                  <input type="number" class="form-control" id="lastNumber" placeholder="Número final">
+                    <label for="lastNumber">E</label>
+                    <input type="number" class="form-control" id="lastNumber" placeholder="Número final">
+                </div>
+              </div>
+              <div class="row fixedSmall" id="excludeContainer">
+                <div class="form-group col">
+                  <label for="excludeNumbers"></label>
+                  <input type="string" class="form-control" id="excludeNumbers" placeholder="Excluir Números">
                 </div>
               </div>
               <div class="row fixedHeight" id="randomContainer">

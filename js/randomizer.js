@@ -1,12 +1,34 @@
 $(document).ready(function(){
     var out = "", number = 0, randomized,
     list = [], initialized = false,
-    initNumber,lastNumber, finalTable;
+    initNumber,lastNumber, finalTable, 
+    excludeList = [], excludeNumbers;
+
+
+    Array.prototype.contains = function(obj) {
+        var i = this.length;
+        while (i--) {
+            if (parseInt(this[i]) == obj) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     function createList(init,final) {
-        for(var i=init; i<=final; i++) {
-            list.push(i);
+
+
+
+        for(var i=parseInt(init,10); i<=parseInt(final,10); i++) {
+            if (excludeList.length) {
+                if(!excludeList.contains(i)){
+                    list.push(i);
+                }
+            } else {
+                list.push(i);
+            }
         }
+
     }
 
     function addRandom() {
@@ -53,12 +75,17 @@ $(document).ready(function(){
         e.preventDefault();
         initNumber = $('#initNumber').val();
         lastNumber = $('#lastNumber').val();
+        excludeNumbers = $('#excludeNumbers').val();
 
         if(initNumber < lastNumber) {
             if (!initialized) {
+                if (excludeNumbers) {
+                    excludeList = excludeNumbers.trim().split(',');
+                }
                 createList(initNumber,lastNumber);
                 initialized = true;
                 $('#setupContainer').hide();
+                $('#excludeContainer').hide();
                 $('#listContainer').show(400);
                 $('#randomContainer').show();
                 addRandom();

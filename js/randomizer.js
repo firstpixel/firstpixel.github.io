@@ -37,7 +37,7 @@ $(document).ready(function(){
         var index = Math.floor(rand);
         randomized = list.splice(index, 1);
         $('#randomized').css("font-size", "0"); 
-        $("#counter").html(number);
+        $("#counter").html(number+"º");
         $('#randomized').html(randomized);
         $('#randomized').animate({
             fontSize: "130px"

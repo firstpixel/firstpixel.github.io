@@ -14,33 +14,16 @@
     
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12" style="text-align:center;">
             <img class="logoSize" src="images/logo.png" alt="Kings Club de Santana">
             <h1 class="gray">Sorteio <span id="counter"></span></h1>
             <form id="initForm">
-              <div class="row fixedSmall" id="setupContainer">
-                <div class="form-group col">
-                  <label for="initNumber">ENTRE</label>
-                  <input type="number" class="form-control" id="initNumber" placeholder="Número inicial">
-                </div>
-                <div class="form-group col">
-                    <label for="lastNumber">E</label>
-                    <input type="number" class="form-control" id="lastNumber" placeholder="Número final">
-                </div>
-              </div>
-              <div class="row fixedSmall" id="excludeContainer">
-                <div class="form-group col">
-                  <label for="excludeNumbers"></label>
-                  <input type="string" class="form-control" id="excludeNumbers" aria-describedby="excludeNumbersHelp" placeholder="Excluir Números">
-                  <small id="excludeNumbersHelp" class="form-text text-muted">Separar por vírgula.</small>
-                </div>
-              </div>
-              <div class="row fixedHeight" id="randomContainer">
+              <div class="row fixedHeight" id="randomContainer" style="padding:5px;margin-bottom:20px;text-align:center;border-radius:25px;border:2px solid #444444;background-color:#f2f2f2;">
                   <div class="col">
                       <span id="randomized" class="rondSize"></span>
                   </div>
               </div>
-              <button type="submit" class="btn btn-primary" id="submitButton" >Sortear número</button>
+              <button type="submit" class="btn btn-lg btn-primary" id="submitButton" >Sortear número</button>
             </form>
         </div>
         <div class="col-md-8 col-sm-12">
@@ -48,7 +31,7 @@
             <table class="table table-bordered" id="listContainer">
                 <thead>
                   <tr>
-                    <th colspan="10" scope="col" class="tableHeader">Sorteados</th>
+                    <th  colspan="10" scope="col" class="tableHeader">Sorteados</th>
                   </tr>
                 </thead>
                 <tbody id="result">
